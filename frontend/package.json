@@ -1,0 +1,15 @@
+{
+  "name": "jeepney-fare-guide-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Jeepney Fare Guide frontend (TypeScript + Parcel)",
+  "scripts": {
+    "dev": "parcel src/pages/index.html src/pages/calculator.html src/pages/route-map.html src/pages/fare-matrix.html src/pages/about.html --port 1234",
+    "build": "parcel build src/pages/index.html src/pages/calculator.html src/pages/route-map.html src/pages/fare-matrix.html src/pages/about.html --dist-dir ../wwwroot --no-source-maps",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "parcel": "2.16.4",
+    "typescript": "5.9.3"
+  }
+}

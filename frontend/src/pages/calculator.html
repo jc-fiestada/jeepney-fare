@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fare Calculator - Jeepney Fare Guide</title>
+<link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="index.html">
+      <span class="logo"><i></i></span>
+      <span><b>Jeepney Fare Guide</b><small>Carmona, Philippines</small></span>
+    </a>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a class="active" href="calculator.html">Calculator</a>
+      <a href="route-map.html">Route Map</a>
+      <a href="fare-matrix.html">Fare Matrix</a>
+      <a href="about.html">About Us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="calc-wrap">
+    <div class="eyebrow">Fare Calculator</div>
+    <h2 class="title">How far are you going?</h2>
+    <p class="sub">Choose your route or enter a distance to see the exact fare.</p>
+
+    <div class="calc-grid">
+      <input type="radio" name="mode" id="m1" checked>
+      <input type="radio" name="mode" id="m2">
+      <input type="radio" name="dir" id="d1" checked>
+      <input type="radio" name="dir" id="d2">
+      <input type="radio" name="pass" id="p1" checked>
+      <input type="radio" name="pass" id="p2">
+      <input type="radio" name="pass" id="p3">
+      <input type="radio" name="pass" id="p4">
+
+      <div class="card form">
+        <div class="seg big">
+          <label for="m1">By Route</label>
+          <label for="m2">By Distance (km)</label>
+        </div>
+
+        <div class="byroute">
+          <span class="lbl">Direction</span>
+          <div class="seg">
+            <label for="d1">G.M.A. to Biñan</label>
+            <label for="d2">Biñan to G.M.A.</label>
+          </div>
+
+          <div class="dir1">
+            <div class="row">
+              <div class="f"><span class="lbl">Get On</span>
+                <select class="sel" id="dir1-on"><option>G.M.A. · 0 km</option><option>Granville · 1 km</option><option>Bancal · 2 km</option><option>Beatway · 3 km</option><option>Global · 4 km</option><option>Southcoast · 5 km</option><option>Carbon · 6 km</option><option>Zigzag · 7 km</option><option>Quiary Checkpoint · 8 km</option><option>Waller Mart · 9 km</option><option>Petron · 10 km</option><option>Golden Mile · 11 km</option><option>Motorola · 12 km</option><option>Soro soro · 13 km</option><option>Napocor · 14 km</option><option>Olivarez · 15 km</option><option>Biñan · 16 km</option></select></div>
+              <span class="swap" id="swap-dir1">⇅</span>
+              <div class="f"><span class="lbl">Get Off</span>
+                <select class="sel" id="dir1-off"><option>G.M.A. · 0 km</option><option>Granville · 1 km</option><option>Bancal · 2 km</option><option>Beatway · 3 km</option><option>Global · 4 km</option><option>Southcoast · 5 km</option><option>Carbon · 6 km</option><option>Zigzag · 7 km</option><option selected>Quiary Checkpoint · 8 km</option><option>Waller Mart · 9 km</option><option>Petron · 10 km</option><option>Golden Mile · 11 km</option><option>Motorola · 12 km</option><option>Soro soro · 13 km</option><option>Napocor · 14 km</option><option>Olivarez · 15 km</option><option>Biñan · 16 km</option></select></div>
+            </div>
+          </div>
+
+          <div class="dir2">
+            <div class="row">
+              <div class="f"><span class="lbl">Get On</span>
+                <select class="sel" id="dir2-on"><option>Biñan · 0 km</option><option>Olivarez · 1 km</option><option>Napocor · 2 km</option><option>Soro soro · 3 km</option><option>Motorola · 4 km</option><option>Golden Mile · 5 km</option><option>Petron · 6 km</option><option>Waller Mart · 7 km</option><option>Quiary Checkpoint · 8 km</option><option>Zigzag · 9 km</option><option>Carbon · 10 km</option><option>Southcoast · 11 km</option><option>Global · 12 km</option><option>Beatway · 13 km</option><option>Bancal · 14 km</option><option>Granville · 15 km</option><option>G.M.A. · 16 km</option></select></div>
+              <span class="swap" id="swap-dir2">⇅</span>
+              <div class="f"><span class="lbl">Get Off</span>
+                <select class="sel" id="dir2-off"><option>Biñan · 0 km</option><option>Olivarez · 1 km</option><option>Napocor · 2 km</option><option>Soro soro · 3 km</option><option>Motorola · 4 km</option><option>Golden Mile · 5 km</option><option>Petron · 6 km</option><option>Waller Mart · 7 km</option><option selected>Quiary Checkpoint · 8 km</option><option>Zigzag · 9 km</option><option>Carbon · 10 km</option><option>Southcoast · 11 km</option><option>Global · 12 km</option><option>Beatway · 13 km</option><option>Bancal · 14 km</option><option>Granville · 15 km</option><option>G.M.A. · 16 km</option></select></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bydist">
+          <span class="lbl">Distance (km)</span>
+          <input class="dist" id="distance" type="number" min="1" max="16" placeholder="1 - 16">
+        </div>
+
+        <span class="lbl">Passenger type</span>
+        <div class="pass">
+          <label for="p1"><span class="b">R</span><b>Regular</b><small>Standard fare</small></label>
+          <label for="p2"><span class="b">S</span><b>Student</b><small>20% discount applied</small></label>
+          <label for="p3"><span class="b">SC</span><b>Senior Citizen</b><small>20% discount applied</small></label>
+          <label for="p4"><span class="b">P</span><b>PWD</b><small>20% discount applied</small></label>
+        </div>
+
+        <div class="actions">
+          <button class="btn" id="compute" type="button">Compute Fare <span>→</span></button>
+          <a href="calculator.html">Reset</a>
+        </div>
+      </div>
+
+      <div class="card result" id="result">
+        <div class="ic">₱</div>
+        <h4>Your fare will appear here</h4>
+        <p>Complete the details and tap “Compute Fare” to see the exact amount.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="fin">
+    <div class="brand">
+      <span class="logo"><i></i></span>
+      <span><b>Jeepney Fare Guide</b><small>Carmona, Philippines</small></span>
+    </div>
+    <p>A clear, shared fare reference for the Carmona community.</p>
+    <nav>
+      <a href="calculator.html">Calculator</a>
+      <a href="route-map.html">Route Map</a>
+      <a href="fare-matrix.html">Matrix</a>
+      <a href="about.html">About Us</a>
+    </nav>
+    <p class="r">Fare rates are subject to client confirmation.</p>
+  </div>
+</footer>
+
+<script type="module" src="../ui/calculatorMain.ts"></script>
+</body>
+</html>
